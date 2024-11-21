@@ -1,5 +1,65 @@
+:root {
+    --primary-colour: #16a34a;
+    --primary-colour-shadow: #166534;
+    --accent-colour: #d946ef;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+aside {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--primary-colour);
+    width: 25%;
+    min-height: 100%;
+    height: auto;
+    gap: 30px;
+}
+
+aside h1 {
+    padding: 0.5rem 1rem;
+}
+
+aside a {
+    padding: 0.2rem 1.2rem;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+aside h1, aside a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+aside a:hover {
+    background-color: var(--primary-colour-shadow);
+    transition: background-color 0.2s linear;
+    cursor:pointer;
+}
+
+.sprout_icon {
+    fill: white;
+    width: 64px;
+    height: 64px;
+}
+
+.aside_icon {
+    fill: white;
+    width: 32px;
+    height: 32px;
 }
