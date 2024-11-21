@@ -173,9 +173,9 @@ header {
     height: auto;
     background-color: var(--highlight-colour);
     display: grid;
-    grid-template-areas: "a a b" "a a d" "a a c";
-    grid-template-columns: 1fr 1fr 1.2fr;
-    gap: 20px;
+    grid-template-areas: "a a b" "a a c" "a a c";
+    grid-template-columns: 1fr 1fr 0.8fr;
+    gap: 10px;
 }
 
 .projects_container {
@@ -186,8 +186,9 @@ header {
     gap: 20px;
 }
 
-.projects_container h2 {
+main .projects_container > h2 {
     grid-area: header;
+    font-size: 1.5em;
 }
 
 .single_project_container {
@@ -213,11 +214,11 @@ header {
     margin-right: 0.5em;
 }
 
-.single_project_container h2 {
+.main_content_container h2 {
     font-size: 1.1em;
 }
 
-.single_project_container p {
+.main_content_container p {
     font-size: 0.8em;
     color: slategray;
 }
@@ -226,14 +227,74 @@ header {
     grid-area: proj;
 }
 
+.box_container {
+    background-color: white;
+    padding: 2em 1em;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.announcements_container,.trending_container {
+    margin-left: 1em;
+}
+
+.announcement {
+    line-height: 1.2em;
+    padding-bottom: 1em;
+    border-bottom: 2px solid lightgray;
+    margin-bottom: 1em;
+}
+
+.announcement:last-child {
+    border: none;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+main .announcements_container > h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+}
 
 .announcements_container {
     grid-area: b;
 }
 
-.trends_container {
+main .trending_container > h2 {
+    font-size: 1.5em;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+}
+
+.trending_container {
     grid-area: c;
 }
+
+.trending {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+.box_container > .trending {
+    margin-bottom: 1em;
+}
+
+.box_container > .trending > p {
+    color: black;
+    line-height: 1.3em;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.box_container > .trending > p > span {
+    color: gray;
+    font-weight: normal
+}
+
+
 
 
 
