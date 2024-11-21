@@ -2,6 +2,7 @@
     --primary-colour: #16a34a;
     --primary-colour-shadow: #166534;
     --accent-colour: #d946ef;
+    --highlight-colour: #bbf7d0;
 }
 
 * {
@@ -14,6 +15,7 @@ body {
     display: flex;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
+    align-items: stretch;
 }
 
 aside {
@@ -72,6 +74,7 @@ main {
 }
 
 header {
+    height: 12em;
     padding: 1rem 2rem;
 }
 
@@ -92,7 +95,7 @@ header {
 .search_container input {
     height: 100%;
     border: none;
-    background-color: rgb(223, 232, 234);
+    background-color: var(--highlight-colour);
     border-radius: 20px;
     width: 100%;
     padding: 0.5em 1em;
@@ -163,5 +166,75 @@ header {
 .post_container a:hover {
     background-color: var(--primary-colour-shadow);
 }
+
+.main_content_container {
+    padding: 2em 1em;
+    min-height: calc(100vh - 15em);
+    height: auto;
+    background-color: var(--highlight-colour);
+    display: grid;
+    grid-template-areas: "a a b" "a a d" "a a c";
+    grid-template-columns: 1fr 1fr 1.2fr;
+    gap: 20px;
+}
+
+.projects_container {
+    display: grid;
+    height: 100%;
+    grid-template-areas: "header header" "proj proj" "proj proj" "proj proj";
+    grid-area: a;
+    gap: 20px;
+}
+
+.projects_container h2 {
+    grid-area: header;
+}
+
+.single_project_container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    background-color: white;
+    padding: 2em 1em;
+    border-radius: 10px;
+    border-left: 10px solid var(--primary-colour-shadow);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project_icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.single_project_container .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5em;
+}
+
+.single_project_container h2 {
+    font-size: 1.1em;
+}
+
+.single_project_container p {
+    font-size: 0.8em;
+    color: slategray;
+}
+
+.single_project_container:nth-child(1) {
+    grid-area: proj;
+}
+
+
+.announcements_container {
+    grid-area: b;
+}
+
+.trends_container {
+    grid-area: c;
+}
+
+
 
 
